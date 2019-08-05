@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "1085571201033",
+    "firebase_url": "https://markeet-6dc91.firebaseio.com",
+    "project_id": "markeet-6dc91",
+    "storage_bucket": "markeet-6dc91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085571201033:android:ba496a3a09675b48",
+        "android_client_info": {
+          "package_name": "com.app.markeet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085571201033-g1lljm744cmghhfg3l4bl4agsp3018fd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5arhRMGInB4W4GSnLZZRztiRKHvFX2r0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085571201033-g1lljm744cmghhfg3l4bl4agsp3018fd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-3158496506143052~5746616744"
+    }
+  ],
+  "configuration_version": "1"
+}

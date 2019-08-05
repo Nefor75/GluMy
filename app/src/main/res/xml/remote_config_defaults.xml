@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+
+    <!--GDPR property -->
+    <entry>
+        <key>publisher_id</key>
+        <value>pub-XXXXXXXXXXXXXXXXXXXXXXXX</value>
+    </entry>
+    <entry>
+        <key>privacy_policy_url</key>
+        <value>http://dream-space.web.id/</value>
+    </entry>
+
+    <!--ADMOB property -->
+    <entry>
+        <key>ad_app_id</key>
+        <value>ca-app-pub-3239677920600357~2463316049</value>
+    </entry>
+
+    <entry>
+        <key>banner_ad_unit_id</key>
+        <value>ca-app-pub-3239677920600357/9667976501</value>
+    </entry>
+
+    <entry>
+        <key>interstitial_ad_unit_id</key>
+        <value>ca-app-pub-3239677920600357/3286400988</value>
+    </entry>
+
+</defaultsMap>
