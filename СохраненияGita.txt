@@ -1,4 +1,5 @@
-—охранение 1
-¬ Activity_main.xml, чтобы значек поиска расположить справа в конце в
+Record_1
+- ¬ Activity_main.xml, чтобы значек поиска расположить справа в конце в
 androidx.appcompat.widget.Toolbar добавлен атрибут android:layout_weight=1,
-а в ImageButton добавлен атрибут android:layout_weight=0.
+а в ImageButton добавлен атрибут android:layout_weight=0;
+- —оздан этот файл.
