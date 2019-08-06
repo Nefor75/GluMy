@@ -3,3 +3,8 @@ Record_1
 androidx.appcompat.widget.Toolbar добавлен атрибут android:layout_weight=1,
 а в ImageButton добавлен атрибут android:layout_weight=0;
 - Создан этот файл.
+Record_2
+- ASDk установлены библиотеки для версий андроид от 4.2 до 9+.
+Record_3
+- В манифест добавлена строка android:usesCleartextTraffic="true"(для запуска приложений на устройствах с Андроид 9.0), т.к Начиная с Android 9.0 (уровень API 28),
+  поддержка открытого текста по умолчанию отключена.
