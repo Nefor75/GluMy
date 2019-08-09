@@ -8,3 +8,5 @@ Record_2
 Record_3
 - В манифест добавлена строка android:usesCleartextTraffic="true"(для запуска приложений на устройствах с Андроид 9.0), т.к Начиная с Android 9.0 (уровень API 28),
   поддержка открытого текста по умолчанию отключена.
+- Record_4
+- minSdkVersion 21 изменен на minSdkVersion 23
