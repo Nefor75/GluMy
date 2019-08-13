@@ -78,9 +78,9 @@ public class AdapterCategory extends RecyclerView.Adapter<RecyclerView.ViewHolde
             vItem.lyt_color.setBackgroundColor(Color.parseColor(c.color));
             Tools.displayImageThumbnail(ctx, vItem.image, Constant.getURLimgCategory(c.icon), 0.5f);
 
-            if (AppConfig.TINT_CATEGORY_ICON) {
-                vItem.image.setColorFilter(Color.WHITE);
-            }
+//            if (AppConfig.TINT_CATEGORY_ICON) {
+//                vItem.image.setColorFilter(Color.WHITE);
+//            }
 
             vItem.lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override

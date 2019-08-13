@@ -14,7 +14,7 @@ public class AppConfig {
     public static final boolean ADS_PRODUCT_DETAILS = true;
 
     // tinting category icon
-    public static final boolean TINT_CATEGORY_ICON = true;
+    public static final boolean TINT_CATEGORY_ICON = false;
 
     /* Locale.US        -> 2,365.12
      * Locale.GERMANY   -> 2.365,12

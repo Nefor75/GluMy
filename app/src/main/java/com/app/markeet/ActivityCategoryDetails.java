@@ -164,9 +164,9 @@ public class ActivityCategoryDetails extends AppCompatActivity {
         ImageView icon = (ImageView) findViewById(R.id.icon);
         Tools.displayImageOriginal(this, icon, Constant.getURLimgCategory(c.icon));
         Tools.setSystemBarColorDarker(this, c.color);
-        if (AppConfig.TINT_CATEGORY_ICON) {
-            icon.setColorFilter(Color.WHITE);
-        }
+//        if (AppConfig.TINT_CATEGORY_ICON) {
+//            icon.setColorFilter(Color.WHITE);
+//        }
 
         // analytics track
         ThisApplication.getInstance().saveLogEvent(c.id, c.name, "CATEGORY_DETAILS");

@@ -10,3 +10,19 @@ Record_3
   поддержка открытого текста по умолчанию отключена.
 - Record_4
 - minSdkVersion 21 изменен на minSdkVersion 23
+- Record_5
+- Требования для картинки категории(файл PNG, монохром, 200х200рх) изменены.
+  В классе ActivityCategoryDetails, метод рrivate void displayCategoryData закомментированы строки 167-169
+  и в классе AppConfig.java(где находится переменная public static final boolean TINT_CATEGORY_ICON, true изменено на false.
+- заменены почти все string анг. на рус.
+- в class AdapterCategory закоментированы строки 81-83.
+- В item_category.xml
+		<!--Ширина, высота, padding категорий на главной-->
+                <LinearLayout
+                    android:id="@+id/lyt_color"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@color/colorAccent"
+                    android:padding="@dimen/spacing_small"> //рамка вокруг картинки была spacing_large(15dp) замена на spacing_small(3dp).
+
+  

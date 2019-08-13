@@ -1,138 +1,137 @@
 <resources>
     <string name="app_name">GluMy</string>
-    <string name="app_tag_line">Online Store for Everyone</string>
+    <string name="app_tag_line">Невероятно вкусные суши в Кременчуге!</string>
 
-    <string name="title_about">About</string>
-    <string name="content_about">Markeet is an online store that sells various types of products, such as clothes, mobile phones, home appliances, and other products. Excellent product quality and competitive prices.
-        \n\nThis application is just a demo of the items on Envato</string>
+    <string name="title_about">О нас</string>
+    <string name="content_about">Суши-кафе Аквариум - Невероятно вкусные суши в Кременчуге!</string>
 
-    <string name="title_activity_news_info">News Info</string>
-    <string name="title_activity_notifications">Notifications</string>
-    <string name="title_activity_wishlist">Wishlist</string>
-    <string name="title_activity_cart">Shopping Cart</string>
-    <string name="title_activity_checkout">Checkout</string>
-    <string name="title_activity_history">Order History</string>
-    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_news_info">Новинки</string>
+    <string name="title_activity_notifications">Уведомления</string>
+    <string name="title_activity_wishlist">Список желаний</string>
+    <string name="title_activity_cart">Корзина</string>
+    <string name="title_activity_checkout">Проверка</string>
+    <string name="title_activity_history">История заказов</string>
+    <string name="title_activity_settings">Настройки</string>
 
     <!--All data for ActivityMain.java -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="str_nav_shopping_cart">Shopping Cart</string>
-    <string name="str_nav_wishlist">Wishlist</string>
-    <string name="str_nav_history">Order History</string>
-    <string name="str_nav_news">News Info</string>
-    <string name="str_nav_notifications">Notifications</string>
-    <string name="sub_title_nav_others">Others</string>
-    <string name="str_nav_instruction">Instruction</string>
-    <string name="str_nav_setting">Settings</string>
+    <string name="str_nav_shopping_cart">Корзина</string>
+    <string name="str_nav_wishlist">Список желаний</string>
+    <string name="str_nav_history">История заказов</string>
+    <string name="str_nav_news">Новинки</string>
+    <string name="str_nav_notifications">Уведомления</string>
+    <string name="sub_title_nav_others">Другое</string>
+    <string name="str_nav_instruction">Инструкция</string>
+    <string name="str_nav_setting">Настройки</string>
     <string name="str_nav_rate">Rate</string>
-    <string name="str_nav_about">About</string>
-    <string name="press_again_exit_app">Press again to exit</string>
+    <string name="str_nav_about">О нас</string>
+    <string name="press_again_exit_app">Для выхода нажмите еще раз</string>
 
-    <string name="title_what_news">What\'s News</string>
-    <string name="title_category">Categories</string>
+    <string name="title_what_news">Новинки</string>
+    <string name="title_category">Категории</string>
 
     <!--All data for ActivityCategoryDetails.java -->
-    <string name="title_menu_search">Search</string>
-    <string name="title_menu_delete">Delete</string>
-    <string name="title_menu_sort">Product Sort</string>
-    <string name="title_dialog_sort">Product Sort</string>
+    <string name="title_menu_search">Поиск</string>
+    <string name="title_menu_delete">Удалить</string>
+    <string name="title_menu_sort">Сортировать по</string>
+    <string name="title_dialog_sort">Сортировать по</string>
 
     <!--All data for ActivityProductDetails.java -->
-    <string name="please_wait_text">Please wait until data loaded</string>
-    <string name="categories_product">Categories :&#160;</string>
-    <string name="cannot_add_wishlist">cannot add to wishlist</string>
-    <string name="add_wishlist">Add to wishlist</string>
-    <string name="remove_wishlist">Remove from wishlist</string>
-    <string name="add_cart">Add to shopping cart</string>
-    <string name="remove_cart">Remove from shopping cart</string>
-    <string name="msg_out_of_stock">Ops, Product out of stock</string>
-    <string name="msg_suspend">Ops, Product is suspend</string>
-    <string name="out_of_stock">OUT OF STOCK</string>
-    <string name="suspend">SUSPEND</string>
-    <string name="ready_stock">READY STOCK</string>
-    <string name="bt_add_cart">ADD TO CART</string>
-    <string name="bt_remove_cart">REMOVE FROM CART</string>
+    <string name="please_wait_text">Пожалуйста, дождитесь загрузки данных</string>
+    <string name="categories_product">Категории :&#160;</string>
+    <string name="cannot_add_wishlist">Невозможно добавить в список желаний</string>
+    <string name="add_wishlist">Добавить в список желаний</string>
+    <string name="remove_wishlist">Удалить из списка желаний</string>
+    <string name="add_cart">Добавить в корзину</string>
+    <string name="remove_cart">Удалить из корзины</string>
+    <string name="msg_out_of_stock">Упс, товара нет</string>
+    <string name="msg_suspend">Упс, товар ожидается</string>
+    <string name="out_of_stock">НЕТ В НАЛИЧИИ</string>
+    <string name="suspend">ОЖИДАЕТСЯ</string>
+    <string name="ready_stock">В НАЛИЧИИ</string>
+    <string name="bt_add_cart">ДОБАВИТЬ В КОРЗИНУ</string>
+    <string name="bt_remove_cart">УДАЛИТЬ ИЗ КОРЗИНЫ</string>
 
     <!--All data for ActivitySplash.java -->
-    <string name="title_unable_connect">Unable connect to server</string>
-    <string name="msg_unable_connect">Server temporary down or under maintenance</string>
-    <string name="msg_app_out_date">Application is out of date, please update to get latest version</string>
-    <string name="msg_no_internet">Please check your Internet connection and try again</string>
-    <string name="title_info">Information</string>
-    <string name="title_no_internet">No Internet Connection</string>
+    <string name="title_unable_connect">Нет соединения с сервером</string>
+    <string name="msg_unable_connect">Сервер временно недоступен или находится на обслуживании</string>
+    <string name="msg_app_out_date">Пожалуйста, обновите приложение до последней версии</string>
+    <string name="msg_no_internet">Пожалуйста, проверьте ваше интернет-соединение и попробуйте снова</string>
+    <string name="title_info">Информация</string>
+    <string name="title_no_internet">Нет соединения с интернетом</string>
 
     <!--All data for ActivityWishlist.java -->
-    <string name="msg_wishlist_empty">Wishlist is empty</string>
-    <string name="title_menu_wishlist">Wishlist</string>
+    <string name="msg_wishlist_empty">Список желаний пуст</string>
+    <string name="title_menu_wishlist">Список желаний</string>
 
     <!--All data for ActivityShoppingCart.java -->
-    <string name="msg_cart_empty">Shopping Cart is empty</string>
-    <string name="before_tax">( Before tax )</string>
-    <string name="total">Total&#160;</string>
-    <string name="stock">Stock : &#160;</string>
-    <string name="QUANTITY">QUANTITY</string>
-    <string name="items">Item(s)</string>
-    <string name="title_menu_checkout">Checkout</string>
+    <string name="msg_cart_empty">Корзина пустая</string>
+    <string name="before_tax">( Без налога )</string>
+    <string name="total">Итого&#160;</string>
+    <string name="stock">Наличие : &#160;</string>
+    <string name="QUANTITY">КОЛИЧЕСТВО</string>
+    <string name="items">Товар(ы)</string>
+    <string name="title_menu_checkout">Проверка</string>
 
     <!--All data for ActivitySearch.java -->
-    <string name="ALL">ALL</string>
-    <string name="Category">Category :&#160;</string>
-    <string name="hint_input_search">Search input</string>
-    <string name="please_fill">Please Fill Search Input</string>
+    <string name="ALL">ВСЕ</string>
+    <string name="Category">Категория :&#160;</string>
+    <string name="hint_input_search">Поиск</string>
+    <string name="please_fill">Пожалуйста, заполните поисковый запрос</string>
 
     <!--All data for ActivityOrderHistory.java -->
-    <string name="msg_history_empty">Order History is empty</string>
-    <string name="title_history_details">Order History Details</string>
+    <string name="msg_history_empty">История заказов пустая</string>
+    <string name="title_history_details">Детали заказа</string>
 
     <!--All data for ActivityNotification.java -->
-    <string name="msg_notif_empty">Notification is empty</string>
-    <string name="default_notification_channel_id">Default</string>
+    <string name="msg_notif_empty">Уведомлений нет</string>
+    <string name="default_notification_channel_id">По умолчанию</string>
 
     <!--All data for ActivityCheckout.java -->
-    <string name="cost_details">Cost Details</string>
-    <string name="total_order">Total Order :&#160;</string>
-    <string name="tax">Tax&#160;</string>
-    <string name="total_fess">Total Fees :&#160;</string>
-    <string name="buyer_profile">Buyer Profile</string>
-    <string name="hint_name">Name</string>
-    <string name="hint_email">Email</string>
-    <string name="hint_phone">Phone</string>
-    <string name="hint_address">Address</string>
-    <string name="hint_shipping">Shipping</string>
-    <string name="choose_shipping">Choose shipping</string>
-    <string name="hint_date_ship">Date Shipping</string>
-    <string name="hint_comment">Comment</string>
-    <string name="product_order_list">Product Order List</string>
+    <string name="cost_details">Стоимость</string>
+    <string name="total_order">Общий заказ :&#160;</string>
+    <string name="tax">Налог&#160;</string>
+    <string name="total_fess">Всего собрано :&#160;</string>
+    <string name="buyer_profile">Профиль покупателя</string>
+    <string name="hint_name">Имя</string>
+    <string name="hint_email">Адрес электронной почты</string>
+    <string name="hint_phone">Номер телефона</string>
+    <string name="hint_address">Адрес</string>
+    <string name="hint_shipping">Доставка</string>
+    <string name="choose_shipping">Способ доставки</string>
+    <string name="hint_date_ship">Дата доставки</string>
+    <string name="hint_comment">Комментарии</string>
+    <string name="product_order_list">Список заказа</string>
 
-    <string name="invalid_name">invalid name</string>
-    <string name="invalid_email">invalid email</string>
-    <string name="invalid_phone">invalid phone</string>
-    <string name="invalid_address">invalid address</string>
-    <string name="invalid_shipping">invalid shipping</string>
-    <string name="invalid_date_ship">invalid date shipping</string>
-    <string name="invalid_comment">invalid comment</string>
+    <string name="invalid_name">неправильное имя</string>
+    <string name="invalid_email">неправильный адрес электронной почты</string>
+    <string name="invalid_phone">неправильный формат номера телефона</string>
+    <string name="invalid_address">неправильный адрес</string>
+    <string name="invalid_shipping">неправиьная доставка</string>
+    <string name="invalid_date_ship">неправиьная дата доставки</string>
+    <string name="invalid_comment">неправильный комментарий</string>
 
-    <string name="title_please_wait">Please Wait</string>
-    <string name="content_submit_checkout">Submit Checkout&#8230;</string>
-    <string name="confirmation">Confirmation</string>
-    <string name="confirm_checkout">Are you sure want to checkout this order?</string>
+    <string name="title_please_wait">Пожалуйста подождите</string>
+    <string name="content_submit_checkout">Отправить заказ&#8230;</string>
+    <string name="confirmation">Подтверждение</string>
+    <string name="confirm_checkout">Вы действительно хотите оформить заказ?</string>
     <string name="failed_checkout">
-        Oops, Failed when checkout order
-        \n\nMake sure you have internet connection, or if you need help please Contact Us from menu Settings
+        К сожалению, не удалось оформить заказ
+         \ n \ nУбедитесь, что у вас есть подключение к Интернету, или, если вам нужна помощь, пожалуйста, свяжитесь с нами из меню Настройки
     </string>
-    <string name="success_checkout">Congratulation</string>
+    <string name="success_checkout">Поздравляем</string>
     <string name="msg_success_checkout">
         Successfully checkout order.\nYour order code : %1$s\n\nYour order will be review soon. When your order is ready, invoice detail will be sent to your email.
     </string>
-    <string name="process_checkout">PROCESS CHECKOUT</string>
+    <string name="process_checkout">ИДЕТ ПРОВЕРКА</string>
 
     <!--All data ActivityNewsInfoDetails.java -->
-    <string name="featured">featured</string>
+    <string name="featured">обработано</string>
 
     <!--All data for ActivityDialogNotification.java -->
-    <string name="title_notif_details">Notification Details</string>
-    <string name="title_notif">Notification</string>
+    <string name="title_notif_details">Детали уведомления</string>
+    <string name="title_notif">Уведомление</string>
 
     <!--All data ActivityFullScreenImage.java -->
     <string name="image_of">%1$d of %2$d</string>
@@ -161,18 +160,18 @@
     </integer-array>
 
     <!-- Activity Setting : xml/setting_preference.xml -->
-    <string name="app_version">Version</string>
+    <string name="app_version">Версия</string>
     <string name="developer_email">dev.dream.space@gmail.com</string>
     <string name="copyright">Copyright © 2016 Dream Space. \nAll right reserved</string>
 
-    <string name="pref_group_notif">NOTIFICATIONS</string>
-    <string name="pref_group_others">OTHERS</string>
-    <string name="pref_title_notif">Push Notifications</string>
-    <string name="pref_title_ringtone">Ringtone</string>
-    <string name="pref_title_vibrate">Vibrate</string>
-    <string name="pref_title_copyright">Copyright</string>
-    <string name="pref_title_contact_us">Contact Us</string>
-    <string name="pref_title_build">Build Version &amp; Serial </string>
+    <string name="pref_group_notif">УВЕДОМЛЕНИЯ</string>
+    <string name="pref_group_others">ДРУГОЕ</string>
+    <string name="pref_title_notif">Получать Уведомления</string>
+    <string name="pref_title_ringtone">РИНГТОН</string>
+    <string name="pref_title_vibrate">Вибрация</string>
+    <string name="pref_title_copyright">Авторские права</string>
+    <string name="pref_title_contact_us">Контакты</string>
+    <string name="pref_title_build">Версия сборки &amp; Серия </string>
     <string name="pref_title_term">Term &amp; Policies</string>
     <string name="pref_ringtone_silent">Silent</string>
     <string name="grant_permission_storage">Grant storage permission to enable</string>
@@ -186,45 +185,45 @@
     <string name="version_unknown">Unknown</string>
 
     <!-- Sort By Label -->
-    <string name="sort_new_old">Time : New to Old</string>
-    <string name="sort_old_new">Time : Old to New</string>
-    <string name="sort_low_high">Price : Low to High</string>
-    <string name="sort_high_low">Price : High to Low</string>
-    <string name="sort_discount">Discount</string>
+    <string name="sort_new_old">Дата (от Новых к Старым)</string>
+    <string name="sort_old_new">Дата (от Старых к Новым)</string>
+    <string name="sort_low_high">Цена (по Возрастанию)</string>
+    <string name="sort_high_low">Цена (по Убыванию)</string>
+    <string name="sort_discount">Скидка</string>
 
     <!-- Other String -->
-    <string name="failed_text">Failed When Load Data</string>
-    <string name="no_internet_text">No Internet Connection</string>
-    <string name="no_item">No Item</string>
-    <string name="msg_data_loaded">Data loaded</string>
-    <string name="msg_failed_load_data">Failed when load data</string>
-    <string name="title_delete_confirm">Delete Confirmation</string>
-    <string name="content_delete_confirm">Are you sure want to delete all&#160;</string>
-    <string name="delete_success">Delete successfully</string>
-    <string name="msg_copied_clipboard">Text copied to clipboard</string>
-    <string name="failed">Failed</string>
+    <string name="failed_text">Ошибка при загрузке данных</string>
+    <string name="no_internet_text">Нет интернет соединения</string>
+    <string name="no_item">Нет товара</string>
+    <string name="msg_data_loaded">Данные загружены</string>
+    <string name="msg_failed_load_data">Ошибка загрузки данных</string>
+    <string name="title_delete_confirm">Подтвердите удаление</string>
+    <string name="content_delete_confirm">Вы уверены, что хотите все удалить?&#160;</string>
+    <string name="delete_success">Удалено</string>
+    <string name="msg_copied_clipboard">Текст скопирован в буфер обмена</string>
+    <string name="failed">Не удалось</string>
 
     <string name="OK">OK</string>
-    <string name="GOT_IT">GOT IT</string>
-    <string name="YES">YES</string>
-    <string name="NO">NO</string>
-    <string name="SETTING">SETTING</string>
-    <string name="CANCEL">CANCEL</string>
-    <string name="CLOSE">CLOSE</string>
-    <string name="UPDATE">UPDATE</string>
-    <string name="DISMISS">DISMISS</string>
-    <string name="HIDE">HIDE</string>
-    <string name="RETRY">RETRY</string>
-    <string name="TRY_AGAIN">TRY AGAIN</string>
-    <string name="DETAILS">DETAILS</string>
-    <string name="FAILED">FAILED</string>
-    <string name="TYPE_SEARCH">SEARCH</string>
-    <string name="NO_IMAGE">NO IMAGE</string>
-    <string name="DELETE">DELETE</string>
-    <string name="OPEN">OPEN</string>
-    <string name="SAVE">SAVE</string>
-    <string name="NEXT">NEXT</string>
-    <string name="SKIP">SKIP</string>
-    <string name="APPLY">APPLY</string>
+    <string name="GOT_IT">ПОНЯТНО</string>
+    <string name="YES">ДА</string>
+    <string name="NO">НЕТ</string>
+    <string name="SETTING">НАСТРОЙКИ</string>
+    <string name="CANCEL">ВЫХОД</string>
+    <string name="CLOSE">ЗАКРЫТЬ</string>
+    <string name="UPDATE">ОБНОВИТЬ</string>
+    <string name="DISMISS">ОТКЛОНИТЬ</string>
+    <string name="HIDE">СКРЫТЬ</string>
+    <string name="RETRY">ПОВТОРИТЬ</string>
+    <string name="TRY_AGAIN">ПОПРОБОВАТЬ ЕЩЕ РАЗ</string>
+    <string name="DETAILS">ПОДРОБНОСТИ</string>
+    <string name="FAILED">НЕ ПОЛУЧИЛОСЬ</string>
+    <string name="TYPE_SEARCH">ПОИСК</string>
+    <string name="NO_IMAGE">НЕТ ИЗОБРАЖЕНИЯ</string>
+    <string name="DELETE">УДАЛИТЬ</string>
+    <string name="OPEN">ОТКРЫТЬ</string>
+    <string name="SAVE">СОХРАНИТЬ</string>
+    <string name="NEXT">ДАЛЬШЕ</string>
+    <string name="SKIP">ПРОПУСТИТЬ</string>
+    <string name="APPLY">ПРИМЕНИТЬ</string>
 
 </resources>
