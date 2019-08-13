@@ -25,5 +25,19 @@ Record_3
                     android:background="@color/colorAccent"
                     android:padding="@dimen/spacing_small"> //рамка вокруг картинки была spacing_large(15dp) замена на spacing_small(3dp).
 - Record_6
-  android:background="@color/colorAccent" //убрал эту строку в коде выше
- 
+  android:background="@color/colorAccent" //убрал эту строку в коде выше.
+- Record_7
+  - удален подфон android:src="@drawable/splash_bg"
+  - заменен логотип main_logo.png
+  - заменен фон в activity_splash с android:background="@color/colorPrimary" на android:background="@drawable/splashbackground"
+  - заменен цвет верхней полоски с <color name="colorPrimaryDark">#429E45</color> на <color name="colorPrimaryDark">#e31e24</color>
+  - из header_drawer.xml удалена строка в первом ImageView android:tint="@color/drawerHeaderIcon"(из-за нее не отображался логотип)
+  - в header_drawer.xml во втором ImageView удален подфон
+     <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/nav_header_bg"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent" />
+  - в header_drawer.xml фон изменен с android:background="@color/drawerHeaderColor" на  android:background="@drawable/splashbackground"
+  - в заменено название приложения в Strings.xml с GluMy на Аквариум
+  - заменена картинка запуска приложения в mipmap

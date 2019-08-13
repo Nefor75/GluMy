@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GluMy</string>
+    <string name="app_name">Аквариум</string>
     <string name="app_tag_line">Невероятно вкусные суши в Кременчуге!</string>
 
     <string name="title_about">О нас</string>
@@ -22,7 +22,7 @@
     <string name="str_nav_news">Новинки</string>
     <string name="str_nav_notifications">Уведомления</string>
     <string name="sub_title_nav_others">Другое</string>
-    <string name="str_nav_instruction">Инструкция</string>
+    <string name="str_nav_instruction">Приветствие</string>
     <string name="str_nav_setting">Настройки</string>
     <string name="str_nav_rate">Rate</string>
     <string name="str_nav_about">О нас</string>
