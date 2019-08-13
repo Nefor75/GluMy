@@ -22,7 +22,8 @@ Record_3
                     android:id="@+id/lyt_color"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:background="@color/colorAccent" //в следующем сохранении убрал эту строку
+                    android:background="@color/colorAccent"
                     android:padding="@dimen/spacing_small"> //рамка вокруг картинки была spacing_large(15dp) замена на spacing_small(3dp).
-
-  
+- Record_6
+  android:background="@color/colorAccent" //убрал эту строку в коде выше
+ 
