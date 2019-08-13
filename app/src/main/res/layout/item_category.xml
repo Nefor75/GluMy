@@ -28,11 +28,11 @@
                 android:orientation="horizontal">
 
                 <!--Ширина, высота, padding категорий на главной-->
+                <!-- убрал эту строку android:background="@color/colorAccent" думаю она лишняя-->
                 <LinearLayout
                     android:id="@+id/lyt_color"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:background="@color/colorAccent"
                     android:padding="@dimen/spacing_small">
 
                     <ImageView
