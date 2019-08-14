@@ -56,19 +56,21 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static android.R.layout.simple_spinner_item;
+
 public class ActivityCheckout extends AppCompatActivity {
 
     private View parent_view;
     private Spinner shipping;
-    private ImageButton bt_date_shipping;
-    private TextView date_shipping;
+    // private ImageButton bt_date_shipping;//Закоментировано, т.к убрали дату доставки
+    //private TextView date_shipping;//Закоментировано, т.к убрали дату доставки
     private RecyclerView recyclerView;
     private MaterialRippleLayout lyt_add_cart;
     private TextView total_order, tax, price_tax, total_fees;
-    private TextInputLayout buyer_name_lyt, email_lyt, phone_lyt, address_lyt, comment_lyt;
-    private EditText buyer_name, email, phone, address, comment;
+    private TextInputLayout buyer_name_lyt, email_lyt, phone_lyt, address_lyt, comment_lyt, time_shipping_lyt;
+    private EditText buyer_name, email, phone, address, comment, time_shipping;
 
-    private DatePickerDialog datePickerDialog;
+   // private DatePickerDialog datePickerDialog;
     private AdapterShoppingCart adapter;
     private DatabaseHandler db;
     private SharedPref sharedPref;
@@ -124,28 +126,31 @@ public class ActivityCheckout extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email);
         phone = (EditText) findViewById(R.id.phone);
         address = (EditText) findViewById(R.id.address);
+        time_shipping = (EditText) findViewById(R.id.time_shipping);
         comment = (EditText) findViewById(R.id.comment);
 
         buyer_name.addTextChangedListener(new CheckoutTextWatcher(buyer_name));
         email.addTextChangedListener(new CheckoutTextWatcher(email));
         phone.addTextChangedListener(new CheckoutTextWatcher(phone));
         address.addTextChangedListener(new CheckoutTextWatcher(address));
+        time_shipping.addTextChangedListener(new CheckoutTextWatcher(time_shipping));
         comment.addTextChangedListener(new CheckoutTextWatcher(comment));
 
         buyer_name_lyt = (TextInputLayout) findViewById(R.id.buyer_name_lyt);
         email_lyt = (TextInputLayout) findViewById(R.id.email_lyt);
         phone_lyt = (TextInputLayout) findViewById(R.id.phone_lyt);
         address_lyt = (TextInputLayout) findViewById(R.id.address_lyt);
+        time_shipping_lyt = (TextInputLayout) findViewById(R.id.time_shipping_lyt);
         comment_lyt = (TextInputLayout) findViewById(R.id.comment_lyt);
         shipping = (Spinner) findViewById(R.id.shipping);
-        bt_date_shipping = (ImageButton) findViewById(R.id.bt_date_shipping);
-        date_shipping = (TextView) findViewById(R.id.date_shipping);
+        // bt_date_shipping = (ImageButton) findViewById(R.id.bt_date_shipping);//Закоментировано, т.к убрали дату доставки
+        //date_shipping = (TextView) findViewById(R.id.date_shipping);//Закоментировано, т.к убрали дату доставки
         List<String> shipping_list = new ArrayList<>();
         shipping_list.add(getString(R.string.choose_shipping));
         shipping_list.addAll(info.shipping);
 
         // Initialize and set Adapter
-        ArrayAdapter adapter_shipping = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, shipping_list.toArray());
+        ArrayAdapter adapter_shipping = new ArrayAdapter<>(this, simple_spinner_item, shipping_list.toArray());
         adapter_shipping.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         shipping.setAdapter(adapter_shipping);
 
@@ -154,12 +159,13 @@ public class ActivityCheckout extends AppCompatActivity {
         progressDialog.setTitle(R.string.title_please_wait);
         progressDialog.setMessage(getString(R.string.content_submit_checkout));
 
-        bt_date_shipping.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialogDatePicker();
-            }
-        });
+        //Закоментировано, т.к убрали дату доставки
+       // bt_date_shipping.setOnClickListener(new View.OnClickListener() {
+////            @Override
+////            public void onClick(View view) {
+////                dialogDatePicker();
+////            }
+////        });
 
         lyt_add_cart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -200,6 +206,7 @@ public class ActivityCheckout extends AppCompatActivity {
             email.setText(buyerProfile.email);
             phone.setText(buyerProfile.phone);
             address.setText(buyerProfile.address);
+            time_shipping.setText(buyerProfile.time_shipping);
         }
     }
 
@@ -226,27 +233,31 @@ public class ActivityCheckout extends AppCompatActivity {
 
     private void submitForm() {
         if (!validateName()) {
-            Snackbar.make(parent_view, R.string.invalid_name, Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(parent_view, R.string.invalid_name, Snackbar.LENGTH_LONG).show();
             return;
         }
         if (!validateEmail()) {
-            Snackbar.make(parent_view, R.string.invalid_email, Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(parent_view, R.string.invalid_email, Snackbar.LENGTH_LONG).show();
             return;
         }
         if (!validatePhone()) {
-            Snackbar.make(parent_view, R.string.invalid_phone, Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(parent_view, R.string.invalid_phone, Snackbar.LENGTH_LONG).show();
             return;
         }
         if (!validateAddress()) {
-            Snackbar.make(parent_view, R.string.invalid_address, Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(parent_view, R.string.invalid_address, Snackbar.LENGTH_LONG).show();
             return;
         }
         if (!validateShipping()) {
-            Snackbar.make(parent_view, R.string.invalid_shipping, Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(parent_view, R.string.invalid_shipping, Snackbar.LENGTH_LONG).show();
             return;
         }
-        if (!validateDateShip()) {
-            Snackbar.make(parent_view, R.string.invalid_date_ship, Snackbar.LENGTH_SHORT).show();
+//        if (!validateDateShip()) {
+//            Snackbar.make(parent_view, R.string.invalid_date_ship, Snackbar.LENGTH_LONG).show();
+//            return;
+//        }
+        if (!validateTimeShipping()){
+            Snackbar.make(parent_view, R.string.invalid_time_ship, Snackbar.LENGTH_LONG).show();
             return;
         }
 
@@ -255,6 +266,7 @@ public class ActivityCheckout extends AppCompatActivity {
         buyerProfile.email = email.getText().toString();
         buyerProfile.phone = phone.getText().toString();
         buyerProfile.address = address.getText().toString();
+        buyerProfile.time_shipping = time_shipping.getText().toString();
         sharedPref.setBuyerProfile(buyerProfile);
 
         // hide keyboard
@@ -375,26 +387,26 @@ public class ActivityCheckout extends AppCompatActivity {
                 });
         dialog.show();
     }
-
-    private void dialogDatePicker() {
-        Calendar cur_calender = Calendar.getInstance();
-        datePickerDialog = new DatePickerDialog(this, R.style.DatePickerTheme, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int _year, int _month, int _day) {
-                Calendar calendar = Calendar.getInstance();
-                calendar.set(Calendar.YEAR, _year);
-                calendar.set(Calendar.MONTH, _month);
-                calendar.set(Calendar.DAY_OF_MONTH, _day);
-                date_ship_millis = calendar.getTimeInMillis();
-                date_shipping.setText(Tools.getFormattedDateSimple(date_ship_millis));
-                datePickerDialog.dismiss();
-            }
-        }, cur_calender.get(Calendar.YEAR), cur_calender.get(Calendar.MONTH), cur_calender.get(Calendar.DAY_OF_MONTH));
-
-        datePickerDialog.setCancelable(true);
-        datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
-        datePickerDialog.show();
-    }
+        //Закоментировано, т.к убрали дату доставки
+//    private void dialogDatePicker() {
+//        Calendar cur_calender = Calendar.getInstance();
+//        datePickerDialog = new DatePickerDialog(this, R.style.DatePickerTheme, new DatePickerDialog.OnDateSetListener() {
+//            @Override
+//            public void onDateSet(DatePicker datePicker, int _year, int _month, int _day) {
+//                Calendar calendar = Calendar.getInstance();
+//                calendar.set(Calendar.YEAR, _year);
+//                calendar.set(Calendar.MONTH, _month);
+//                calendar.set(Calendar.DAY_OF_MONTH, _day);
+//                date_ship_millis = calendar.getTimeInMillis();
+//                date_shipping.setText(Tools.getFormattedDateSimple(date_ship_millis));
+//                datePickerDialog.dismiss();
+//            }
+//        }, cur_calender.get(Calendar.YEAR), cur_calender.get(Calendar.MONTH), cur_calender.get(Calendar.DAY_OF_MONTH));
+//
+//        datePickerDialog.setCancelable(true);
+//        datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+//        datePickerDialog.show();
+//    }
 
     // validation method
     private boolean validateEmail() {
@@ -453,13 +465,24 @@ public class ActivityCheckout extends AppCompatActivity {
         return true;
     }
 
-    private boolean validateDateShip() {
-        if (date_ship_millis == 0L) {
+//    private boolean validateDateShip() {
+//        if (date_ship_millis == 0L) {
+//            return false;
+//        }
+//        return true;
+//    }
+
+    private boolean validateTimeShipping() {
+        String str = time_shipping.getText().toString().trim();
+        if (str.isEmpty()) {
+            time_shipping_lyt.setError(getString(R.string.invalid_time_ship));
+            requestFocus(time_shipping);
             return false;
+        } else {
+            time_shipping_lyt.setErrorEnabled(false);
         }
         return true;
     }
-
 
     private void requestFocus(View view) {
         if (view.requestFocus()) {

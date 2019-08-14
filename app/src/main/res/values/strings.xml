@@ -100,17 +100,19 @@
     <string name="hint_address">Адрес</string>
     <string name="hint_shipping">Доставка</string>
     <string name="choose_shipping">Способ доставки</string>
-    <string name="hint_date_ship">Дата доставки</string>
+    <!--<string name="hint_date_ship">Дата доставки</string>-->
+    <string name="time_ship">Время доставки</string>
     <string name="hint_comment">Комментарии</string>
     <string name="product_order_list">Список заказа</string>
 
-    <string name="invalid_name">неправильное имя</string>
-    <string name="invalid_email">неправильный адрес электронной почты</string>
+    <string name="invalid_name">неправильный формат имени</string>
+    <string name="invalid_email">неправильный формат адреса электронной почты</string>
     <string name="invalid_phone">неправильный формат номера телефона</string>
-    <string name="invalid_address">неправильный адрес</string>
-    <string name="invalid_shipping">неправиьная доставка</string>
-    <string name="invalid_date_ship">неправиьная дата доставки</string>
-    <string name="invalid_comment">неправильный комментарий</string>
+    <string name="invalid_address">неправильный формат адреса</string>
+    <string name="invalid_shipping">неправильный формат доставки</string>
+    <!--<string name="invalid_date_ship">неправильная дата доставки</string>-->
+    <string name="invalid_time_ship">неправильный формат времени доставки</string>
+    <string name="invalid_comment">неправильный формат комментария</string>
 
     <string name="title_please_wait">Пожалуйста подождите</string>
     <string name="content_submit_checkout">Отправить заказ&#8230;</string>

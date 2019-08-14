@@ -120,6 +120,7 @@ public class FragmentFeaturedNews extends Fragment {
             public void onItemClick(View view, NewsInfo obj) {
                 Snackbar.make(root_view, obj.title, Snackbar.LENGTH_SHORT).show();
                 ActivityNewsInfoDetails.navigate(getActivity(), obj.id, false);
+
             }
         });
 

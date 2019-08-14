@@ -41,3 +41,9 @@ Record_3
   - в header_drawer.xml фон изменен с android:background="@color/drawerHeaderColor" на  android:background="@drawable/splashbackground"
   - в заменено название приложени€ в Strings.xml с GluMy на јквариум
   - заменена картинка запуска приложени€ в mipmap
+- Record_8
+  - в админке добавлены картинки в слайдер.
+  - в include_checkout_form.xml закоментирован TextView пол€ ƒата доставки. ¬ св€зи с этим в классе ActivityCheckout.java закоментированы строки 65-66, 77, 147-148, 164-169, 386-404.
+    р€дом с закомменированными строками кода ƒаты добавлены новые строки кода ¬ремени.
+
+    

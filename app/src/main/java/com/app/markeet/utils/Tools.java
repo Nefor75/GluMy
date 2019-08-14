@@ -179,7 +179,6 @@ public class Tools {
 
     }
 
-
     public static int colorDarker(int color) {
         float[] hsv = new float[3];
         Color.colorToHSV(color, hsv);
