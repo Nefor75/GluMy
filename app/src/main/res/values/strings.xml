@@ -141,18 +141,20 @@
     <!--All data related about page-->
     <!--Size three array below must be same -->
     <string-array name="about_title_array">
-        <item>WELCOME</item>
-        <item>DISCOVER PRODUCT</item>
-        <item>ADD TO CART</item>
-        <item>VERIFY AND RECEIVE</item>
+        <item>ПРИВЕТ!</item>
+        <item>ВСЕ БЛЮДА</item>
+        <item>ПРЯМО НА СМАРТФОНЕ</item>
+        <item>ПРИЯТНОГО АППЕТИТА!</item>
     </string-array>
 
     <string-array name="about_description_array">
-        <item>Markeet is Premium Online Shopping\nPlatform for Everyone</item>
-        <item>Search Latest and Featured Product\nWith Best Price</item>
-        <item>Add to Cart All Product You need\nAnd Checkout the Order</item>
-        <item>We Will Verify Your Order\nPay the Bill and Receive the Product</item>
+        <item>Приложение постоянного клиента для удобного заказа блюд нашего кафе</item>
+        <item>Заказывай все меню кафе на удобное время</item>
+        <item>Заказ блюд на пути в кафе или с доставкой по городу</item>
+        <item></item>
     </string-array>
+
+
 
     <integer-array name="about_images_array">
         <item>@drawable/intro_img_1</item>
