@@ -522,8 +522,11 @@ public class ActivityCheckout extends AppCompatActivity {
                 case R.id.phone:
                     validatePhone();
                     break;
-                case R.id.address:
-                    validateAddress();
+//                case R.id.address:
+//                    validateAddress();
+//                    break;
+                case R.id.time_shipping:
+                    validateTimeShipping();
                     break;
             }
         }

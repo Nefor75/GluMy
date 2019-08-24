@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:text="-"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                    android:textColor="@color/colorPrice"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold" />
 
                 <TextView
@@ -92,7 +92,7 @@
                 android:paddingRight="@dimen/spacing_middle"
                 android:paddingTop="@dimen/spacing_medium"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorGreen"
                 android:textStyle="bold"
                 android:visibility="visible" />
 
@@ -160,7 +160,7 @@
             android:paddingBottom="@dimen/spacing_large"
             android:paddingTop="@dimen/spacing_large">
 
-            <include layout="@layout/include_ad_large_banner" />
+            <!--<include layout="@layout/include_ad_large_banner" />-->
 
         </RelativeLayout>
 
@@ -193,6 +193,7 @@
                 android:textColor="@color/grey_80" />
 
         </LinearLayout>
+
 
     </LinearLayout>
 

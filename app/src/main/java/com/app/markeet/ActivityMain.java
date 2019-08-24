@@ -228,9 +228,9 @@ public class ActivityMain extends AppCompatActivity {
                 i = new Intent(this, ActivityInstruction.class);
                 startActivity(i);
                 break;
-            case R.id.nav_rate:
-                Tools.rateAction(this);
-                break;
+//            case R.id.nav_rate:
+//                Tools.rateAction(this);
+//                break;
             case R.id.nav_about:
                 Tools.showDialogAbout(this);
                 break;

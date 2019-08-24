@@ -116,7 +116,7 @@ public class ActivityProductDetails extends AppCompatActivity {
         initToolbar();
         initComponent();
         requestAction();
-        prepareAds();
+        //prepareAds();
     }
 
     private void initToolbar() {
@@ -176,19 +176,19 @@ public class ActivityProductDetails extends AppCompatActivity {
     }
 
 
-    private void prepareAds() {
-        if (AppConfig.ADS_PRODUCT_DETAILS && NetworkCheck.isConnect(getApplicationContext())) {
-            AdView mAdView = new AdView(this);
-            mAdView.setAdSize(AdSize.LARGE_BANNER);
-            mAdView.setAdUnitId(sharedPref.getBannerUnitId());
-            ((LinearLayout) findViewById(R.id.ad_container)).addView(mAdView);
-            AdRequest adRequest = new AdRequest.Builder()
-                    .addNetworkExtrasBundle(AdMobAdapter.class, GDPR.getBundleAd(this)).build();
-            mAdView.loadAd(adRequest);
-        } else {
-            ((RelativeLayout) findViewById(R.id.banner_layout)).setVisibility(View.GONE);
-        }
-    }
+//    private void prepareAds() {
+//        if (AppConfig.ADS_PRODUCT_DETAILS && NetworkCheck.isConnect(getApplicationContext())) {
+//            AdView mAdView = new AdView(this);
+//            mAdView.setAdSize(AdSize.LARGE_BANNER);
+//            mAdView.setAdUnitId(sharedPref.getBannerUnitId());
+//            ((LinearLayout) findViewById(R.id.ad_container)).addView(mAdView);
+//            AdRequest adRequest = new AdRequest.Builder()
+//                    .addNetworkExtrasBundle(AdMobAdapter.class, GDPR.getBundleAd(this)).build();
+//            mAdView.loadAd(adRequest);
+//        } else {
+//            ((RelativeLayout) findViewById(R.id.banner_layout)).setVisibility(View.GONE);
+//        }
+//    }
 
     private void requestNewsInfoDetailsApi() {
         API api = RestAdapter.createAPI();
@@ -502,11 +502,11 @@ public class ActivityProductDetails extends AppCompatActivity {
         Cart c = db.getCart(product_id);
         flag_cart = (c != null);
         if (flag_cart) {
-            lyt_add_cart.setBackgroundColor(getResources().getColor(R.color.colorRemoveCart));
+            lyt_add_cart.setBackgroundColor(getResources().getColor(R.color.colorGreen));
             tv_add_cart.setText(R.string.bt_remove_cart);
             ic_add_cart.setImageResource(R.drawable.ic_remove);
         } else {
-            lyt_add_cart.setBackgroundColor(getResources().getColor(R.color.colorAddCart));
+            lyt_add_cart.setBackgroundColor(getResources().getColor(R.color.colorRemoveCart));
             tv_add_cart.setText(R.string.bt_add_cart);
             ic_add_cart.setImageResource(R.drawable.ic_add);
         }

@@ -57,6 +57,7 @@
                     android:id="@+id/lyt_main_content"
                     layout="@layout/include_product_content" />
 
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -81,8 +82,8 @@
         style="@style/RippleStyleBlack"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAddCart"
-        android:clickable="true">
+        android:background="@color/colorRemoveCart"
+        android:focusable="true">
 
         <LinearLayout
             android:layout_width="match_parent"

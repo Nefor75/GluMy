@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorInfo"
+        android:background="@color/colorPrimary"
         android:gravity="center"
         android:minHeight="@dimen/dialog_header_height"
         android:orientation="horizontal">

@@ -47,4 +47,16 @@ Record_3
     рядом с закомменированными строками кода Даты добавлены новые строки кода Времени.
 - Record_9
   - В шторке изменен раздел Приветствие(замена картинок и текста).
-    
+- Record_10
+  - закоментил рекламу в карточке товара(строка 119 и 179-191)
+  - поменяны цвета кнопки "Добавить в корзину"(был желтый стал серый) и "удалить из корзины"(был серый стал зеленый)
+  - В activity_splash.xml добавлен фон
+      <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/splashbackground"
+        android:scaleType="centerCrop"/> 
+  - закоментил рекламу в Tools.java (строки 79-87),ActivityMain.java(строки 231-233), ActivitySplash.java(133), ActivityShopping_cart.java(стр 69)?????
+  - В activity_shoping_cart.xml добавлен LinearLayout(фон зеленый и текст Оформить) 
+  - ColorPrymary #4DB151 изменен на #7da5d0.
+   - Добавлен цвет <color name="colorGreen">#4DB151</color> 

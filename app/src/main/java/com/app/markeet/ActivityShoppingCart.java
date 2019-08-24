@@ -18,6 +18,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.app.markeet.adapter.AdapterShoppingCart;
@@ -49,6 +50,7 @@ public class ActivityShoppingCart extends AppCompatActivity {
 
         initToolbar();
         iniComponent();
+
     }
 
     private void iniComponent() {
@@ -56,6 +58,7 @@ public class ActivityShoppingCart extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         price_total = (TextView) findViewById(R.id.price_total);
+
     }
 
     private void initToolbar() {
@@ -66,13 +69,13 @@ public class ActivityShoppingCart extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
         actionBar.setTitle(R.string.title_activity_cart);
-        Tools.systemBarLolipop(this);
-    }
+      //  Tools.systemBarLolipop(this);
+            }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_activity_shopping_cart, menu);
-        return true;
+        return false;//if true then меню отображается на тулбаре
     }
 
     @Override

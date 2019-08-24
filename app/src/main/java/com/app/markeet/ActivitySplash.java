@@ -130,7 +130,7 @@ public class ActivitySplash extends AppCompatActivity {
             @Override
             public void onPositiveClick(Dialog dialog) {
                 dialog.dismiss();
-                Tools.rateAction(ActivitySplash.this);
+                //Tools.rateAction(ActivitySplash.this);
             }
 
             @Override

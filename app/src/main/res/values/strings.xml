@@ -3,7 +3,7 @@
     <string name="app_tag_line">Невероятно вкусные суши в Кременчуге!</string>
 
     <string name="title_about">О нас</string>
-    <string name="content_about">Суши-кафе Аквариум - Невероятно вкусные суши в Кременчуге!</string>
+    <string name="content_about">Суши-кафе Аквариум - невероятно вкусные суши в Кременчуге!</string>
 
     <string name="title_activity_news_info">Новинки</string>
     <string name="title_activity_notifications">Уведомления</string>
@@ -43,8 +43,8 @@
     <string name="cannot_add_wishlist">Невозможно добавить в список желаний</string>
     <string name="add_wishlist">Добавить в список желаний</string>
     <string name="remove_wishlist">Удалить из списка желаний</string>
-    <string name="add_cart">Добавить в корзину</string>
-    <string name="remove_cart">Удалить из корзины</string>
+    <string name="add_cart">Товар добавлен в корзину</string>
+    <string name="remove_cart">Товар удален из корзины</string>
     <string name="msg_out_of_stock">Упс, товара нет</string>
     <string name="msg_suspend">Упс, товар ожидается</string>
     <string name="out_of_stock">НЕТ В НАЛИЧИИ</string>
@@ -62,7 +62,7 @@
     <string name="title_no_internet">Нет соединения с интернетом</string>
 
     <!--All data for ActivityWishlist.java -->
-    <string name="msg_wishlist_empty">Список желаний пуст</string>
+    <string name="msg_wishlist_empty">Список желаний пустой</string>
     <string name="title_menu_wishlist">Список желаний</string>
 
     <!--All data for ActivityShoppingCart.java -->
@@ -124,9 +124,9 @@
     </string>
     <string name="success_checkout">Поздравляем</string>
     <string name="msg_success_checkout">
-        Successfully checkout order.\nYour order code : %1$s\n\nYour order will be review soon. When your order is ready, invoice detail will be sent to your email.
+        Заказ успешно оформлен.\nНомер Вашего заказа : %1$s\n\nКогда заказ будет готов, детали будут отправлены на Ваш электронный адрес.
     </string>
-    <string name="process_checkout">ИДЕТ ПРОВЕРКА</string>
+    <string name="process_checkout">ОФОРМИТЬ ЗАКАЗ</string>
 
     <!--All data ActivityNewsInfoDetails.java -->
     <string name="featured">обработано</string>
@@ -148,13 +148,11 @@
     </string-array>
 
     <string-array name="about_description_array">
-        <item>Приложение постоянного клиента для удобного заказа блюд нашего кафе</item>
-        <item>Заказывай все меню кафе на удобное время</item>
-        <item>Заказ блюд на пути в кафе или с доставкой по городу</item>
+        <item>Приложение постоянного клиента для \nудобного заказа блюд нашего кафе</item>
+        <item>Заказывай все меню кафе \nна удобное время</item>
+        <item>Заказ блюд на пути в кафе \nили с доставкой по городу</item>
         <item></item>
     </string-array>
-
-
 
     <integer-array name="about_images_array">
         <item>@drawable/intro_img_1</item>
@@ -198,11 +196,11 @@
     <!-- Other String -->
     <string name="failed_text">Ошибка при загрузке данных</string>
     <string name="no_internet_text">Нет интернет соединения</string>
-    <string name="no_item">Нет товара</string>
+    <string name="no_item">Корзина пустая</string>
     <string name="msg_data_loaded">Данные загружены</string>
     <string name="msg_failed_load_data">Ошибка загрузки данных</string>
     <string name="title_delete_confirm">Подтвердите удаление</string>
-    <string name="content_delete_confirm">Вы уверены, что хотите все удалить?&#160;</string>
+    <string name="content_delete_confirm">Вы уверены, что хотите все удалить из корзины?</string>
     <string name="delete_success">Удалено</string>
     <string name="msg_copied_clipboard">Текст скопирован в буфер обмена</string>
     <string name="failed">Не удалось</string>
@@ -229,5 +227,6 @@
     <string name="NEXT">ДАЛЬШЕ</string>
     <string name="SKIP">ПРОПУСТИТЬ</string>
     <string name="APPLY">ПРИМЕНИТЬ</string>
+    <string name="checkout">Оформить</string>
 
 </resources>
