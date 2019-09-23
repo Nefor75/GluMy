@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/grey_60</item>
         <item name="colorControlNormal">@color/grey_60</item>
 
     </style>
@@ -59,6 +59,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="colorAccent">@android:color/white</item>
     </style>
 
     <style name="AppThemeSetting.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

@@ -27,9 +27,9 @@ import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
-
 import com.app.markeet.adapter.AdapterShoppingCart;
 import com.app.markeet.connection.API;
 import com.app.markeet.connection.RestAdapter;
@@ -47,15 +47,13 @@ import com.app.markeet.utils.CallbackDialog;
 import com.app.markeet.utils.DialogUtils;
 import com.app.markeet.utils.Tools;
 import com.balysv.materialripple.MaterialRippleLayout;
-
+import com.app.markeet.ActivityShoppingCart;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
 import static android.R.layout.simple_spinner_item;
 
 public class ActivityCheckout extends AppCompatActivity {
@@ -69,7 +67,6 @@ public class ActivityCheckout extends AppCompatActivity {
     private TextView total_order, tax, price_tax, total_fees;
     private TextInputLayout buyer_name_lyt, email_lyt, phone_lyt, address_lyt, comment_lyt, time_shipping_lyt;
     private EditText buyer_name, email, phone, address, comment, time_shipping;
-
    // private DatePickerDialog datePickerDialog;
     private AdapterShoppingCart adapter;
     private DatabaseHandler db;
@@ -142,17 +139,17 @@ public class ActivityCheckout extends AppCompatActivity {
         address_lyt = (TextInputLayout) findViewById(R.id.address_lyt);
         time_shipping_lyt = (TextInputLayout) findViewById(R.id.time_shipping_lyt);
         comment_lyt = (TextInputLayout) findViewById(R.id.comment_lyt);
-        shipping = (Spinner) findViewById(R.id.shipping);
+       // shipping = (Spinner) findViewById(R.id.shipping);
         // bt_date_shipping = (ImageButton) findViewById(R.id.bt_date_shipping);//Закоментировано, т.к убрали дату доставки
         //date_shipping = (TextView) findViewById(R.id.date_shipping);//Закоментировано, т.к убрали дату доставки
-        List<String> shipping_list = new ArrayList<>();
-        shipping_list.add(getString(R.string.choose_shipping));
-        shipping_list.addAll(info.shipping);
+//        List<String> shipping_list = new ArrayList<>();
+//        shipping_list.add(getString(R.string.choose_shipping));
+//        shipping_list.addAll(info.shipping);
 
         // Initialize and set Adapter
-        ArrayAdapter adapter_shipping = new ArrayAdapter<>(this, simple_spinner_item, shipping_list.toArray());
-        adapter_shipping.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        shipping.setAdapter(adapter_shipping);
+//        ArrayAdapter adapter_shipping = new ArrayAdapter<>(this, simple_spinner_item, shipping_list.toArray());
+//        adapter_shipping.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        shipping.setAdapter(adapter_shipping);
 
         progressDialog = new ProgressDialog(ActivityCheckout.this);
         progressDialog.setCancelable(false);
@@ -184,10 +181,10 @@ public class ActivityCheckout extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//    }
 
     @Override
     protected void onResume() {
@@ -213,12 +210,27 @@ public class ActivityCheckout extends AppCompatActivity {
     private void setTotalPrice() {
         List<Cart> items = adapter.getItem();
         Double _total_order = 0D, _price_tax = 0D;
-        String _total_order_str, _price_tax_str;
-        for (Cart c : items) {
-            _total_order = _total_order + (c.amount * c.price_item);
+        Double _price_add_self = 15D;
+        Double _price_add_delivery = 60D;
+        String _total_order_str;
+        String _price_tax_str;
+
+        boolean self_bool = getIntent().getBooleanExtra("FLAG_SELF", true);
+        boolean delivery_bool = getIntent().getBooleanExtra("FLAG_DELIVERY", true);
+
+               for (Cart c : items) {
+                   _total_order = _total_order + (c.amount * c.price_item);
+               }
+        if (self_bool){
+            _total_order = _total_order + _price_add_self;
         }
+        if (delivery_bool){
+            _total_order = _total_order + _price_add_delivery;
+        }
+
         _price_tax = _total_order * info.tax / 100;
         _total_fees = _total_order + _price_tax;
+
         _price_tax_str = Tools.getFormattedPrice(_price_tax, this);
         _total_order_str = Tools.getFormattedPrice(_total_order, this);
         _total_fees_str = Tools.getFormattedPrice(_total_fees, this);
@@ -229,7 +241,6 @@ public class ActivityCheckout extends AppCompatActivity {
         price_tax.setText(_price_tax_str);
         total_fees.setText(_total_fees_str);
     }
-
 
     private void submitForm() {
         if (!validateName()) {
@@ -248,10 +259,10 @@ public class ActivityCheckout extends AppCompatActivity {
             Snackbar.make(parent_view, R.string.invalid_address, Snackbar.LENGTH_LONG).show();
             return;
         }
-        if (!validateShipping()) {
-            Snackbar.make(parent_view, R.string.invalid_shipping, Snackbar.LENGTH_LONG).show();
-            return;
-        }
+//        if (!validateShipping()) {
+//            Snackbar.make(parent_view, R.string.invalid_shipping, Snackbar.LENGTH_LONG).show();
+//            return;
+//        }
 //        if (!validateDateShip()) {
 //            Snackbar.make(parent_view, R.string.invalid_date_ship, Snackbar.LENGTH_LONG).show();
 //            return;
@@ -279,7 +290,7 @@ public class ActivityCheckout extends AppCompatActivity {
     private void submitOrderData() {
         // prepare checkout data
         Checkout checkout = new Checkout();
-        ProductOrder productOrder = new ProductOrder(buyerProfile, shipping.getSelectedItem().toString(), date_ship_millis, comment.getText().toString().trim());
+        ProductOrder productOrder = new ProductOrder(buyerProfile, date_ship_millis, comment.getText().toString().trim());
         productOrder.status = "WAITING";
         productOrder.total_fees = _total_fees;
         productOrder.tax = info.tax;
@@ -311,7 +322,6 @@ public class ActivityCheckout extends AppCompatActivity {
                 } else {
                     dialogFailedRetry();
                 }
-
             }
 
             @Override
@@ -457,13 +467,13 @@ public class ActivityCheckout extends AppCompatActivity {
         return true;
     }
 
-    private boolean validateShipping() {
-        int pos = shipping.getSelectedItemPosition();
-        if (pos == 0) {
-            return false;
-        }
-        return true;
-    }
+//    private boolean validateShipping() {
+//        int pos = shipping.getSelectedItemPosition();
+//        if (pos == 0) {
+//            return false;
+//        }
+//        return true;
+//    }
 
 //    private boolean validateDateShip() {
 //        if (date_ship_millis == 0L) {

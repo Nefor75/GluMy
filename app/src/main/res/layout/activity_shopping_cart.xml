@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey_5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -32,8 +33,62 @@
             layout="@layout/include_no_item"
             android:visibility="gone" />
 
-    </RelativeLayout>
+        </RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/lyt_add_services"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rg_add_services"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGreen"
+            android:layout_above="@+id/ll_bottom_cart"
+            android:theme="@style/MyRadioButton">
+
+            <RadioButton
+                android:id="@+id/rbutton_with_myself"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/with_myself"
+                android:button="@null"
+                android:textColor="@android:color/white"
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textSize="18sp"
+                android:layout_marginHorizontal="@dimen/spacing_large">
+
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/rbutton_dilivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_mlarge"
+                android:gravity="start"
+                android:text="@string/delivery"
+                android:textSize="18sp"
+                android:button="@null"
+                android:textColor="@android:color/white"
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_marginHorizontal="@dimen/spacing_large">
+
+            </RadioButton>
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/white">
+
+        </View>
+
+    </LinearLayout>
     <LinearLayout
         android:id="@+id/ll_bottom_cart"
         android:layout_width="match_parent"
@@ -46,11 +101,30 @@
             android:id="@+id/tv_botom_cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_marginLeft="@dimen/spacing_large"
             android:text="@string/checkout"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             android:textColor="@android:color/white"
             android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/action_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_delete"
+            android:layout_marginRight="@dimen/spacing_mlarge"
+            android:title="@string/title_menu_delete"
+            android:onClick="onClicked"/>
+
+        <ImageButton
+            android:id="@+id/action_checkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_checkout"
+            android:layout_marginRight="@dimen/spacing_mlarge"
+            android:title="@string/title_menu_checkout"
+            android:onClick="onClicked"/>
 
     </LinearLayout>
 
@@ -60,7 +134,7 @@
         android:background="@color/grey_10"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="@dimen/spacing_large">
+        android:padding="@dimen/spacing_mlarge">
 
         <TextView
             android:layout_width="wrap_content"

@@ -11,4 +11,5 @@ public class Info implements Serializable {
     public String currency;
     public List<String> shipping = new ArrayList<>();
 
+
 }

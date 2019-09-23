@@ -85,13 +85,13 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Spinner
+        <!--<Spinner
             android:id="@+id/shipping"
             style="@style/Base.Widget.AppCompat.Spinner.Underlined"
             android:layout_width="match_parent"
             android:layout_height="@dimen/spacing_xxlarge"
             android:layout_marginTop="@dimen/spacing_middle"
-            android:spinnerMode="dialog" />
+            android:spinnerMode="dialog" />-->
 
         <!--<LinearLayout
             android:layout_width="match_parent"

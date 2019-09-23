@@ -9,7 +9,7 @@
     <string name="title_activity_notifications">Уведомления</string>
     <string name="title_activity_wishlist">Список желаний</string>
     <string name="title_activity_cart">Корзина</string>
-    <string name="title_activity_checkout">Проверка</string>
+    <string name="title_activity_checkout">Оформление</string>
     <string name="title_activity_history">История заказов</string>
     <string name="title_activity_settings">Настройки</string>
 
@@ -72,7 +72,7 @@
     <string name="stock">Наличие : &#160;</string>
     <string name="QUANTITY">КОЛИЧЕСТВО</string>
     <string name="items">Товар(ы)</string>
-    <string name="title_menu_checkout">Проверка</string>
+    <string name="title_menu_checkout">Оформление</string>
 
     <!--All data for ActivitySearch.java -->
     <string name="ALL">ВСЕ</string>
@@ -92,7 +92,7 @@
     <string name="cost_details">Стоимость</string>
     <string name="total_order">Общий заказ :&#160;</string>
     <string name="tax">Налог&#160;</string>
-    <string name="total_fess">Всего собрано :&#160;</string>
+    <string name="total_fess">Всего к оплате :&#160;</string>
     <string name="buyer_profile">Профиль покупателя</string>
     <string name="hint_name">Имя</string>
     <string name="hint_email">Адрес электронной почты</string>
@@ -100,6 +100,7 @@
     <string name="hint_address">Адрес</string>
     <string name="hint_shipping">Доставка</string>
     <string name="choose_shipping">Способ доставки</string>
+    <string name="choose_shipping_cart">Выберите способ доставки</string>
     <!--<string name="hint_date_ship">Дата доставки</string>-->
     <string name="time_ship">Время доставки</string>
     <string name="hint_comment">Комментарии</string>
@@ -204,6 +205,8 @@
     <string name="delete_success">Удалено</string>
     <string name="msg_copied_clipboard">Текст скопирован в буфер обмена</string>
     <string name="failed">Не удалось</string>
+    <string name="with_myself">Заберу в кафе (упаковка 15 грн)</string>
+    <string name="delivery">Доставка по городу (60 грн)</string>
 
     <string name="OK">OK</string>
     <string name="GOT_IT">ПОНЯТНО</string>

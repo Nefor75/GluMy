@@ -7,7 +7,7 @@ public class ProductOrder implements Serializable {
     public String buyer;
     public String address;
     public String email;
-    public String shipping;
+   // public String shipping;
    // public Long date_ship;
     public Long time_ship;
     public String phone;
@@ -22,12 +22,12 @@ public class ProductOrder implements Serializable {
     public ProductOrder() {
     }
 
-    public ProductOrder(BuyerProfile buyerProfile, String shipping, Long time_ship, String comment) {
+    public ProductOrder(BuyerProfile buyerProfile, Long time_ship, String comment) {
         this.buyer = buyerProfile.name;
         this.address = buyerProfile.address;
         this.email = buyerProfile.email;
         this.phone = buyerProfile.phone;
-        this.shipping = shipping;
+       // this.shipping = shipping;
        // this.date_ship = date_ship;
         this.time_ship = time_ship;
         this.comment = comment;
