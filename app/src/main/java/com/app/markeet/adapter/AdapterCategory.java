@@ -91,7 +91,6 @@ public class AdapterCategory extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 }
             });
         }
-
     }
 
     @Override
@@ -108,6 +107,4 @@ public class AdapterCategory extends RecyclerView.Adapter<RecyclerView.ViewHolde
         this.items = items;
         notifyDataSetChanged();
     }
-
-
 }

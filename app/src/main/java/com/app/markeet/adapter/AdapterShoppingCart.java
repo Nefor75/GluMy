@@ -79,8 +79,9 @@ public class AdapterShoppingCart extends RecyclerView.Adapter<RecyclerView.ViewH
             ViewHolder vItem = (ViewHolder) holder;
             final Cart c = items.get(position);
             vItem.title.setText(c.product_name);
-            vItem.price.setText(Tools.getFormattedPrice(c.price_item, ctx));
-            vItem.amount.setText(c.amount + " " + ctx.getString(R.string.items));
+            double d = c.price_item * c.amount;//Цена умноженная на количество
+            vItem.price.setText(Tools.getFormattedPrice(d, ctx));
+            vItem.amount.setText(c.amount + "");
             Tools.displayImageThumbnail(ctx, vItem.image, Constant.getURLimgProduct(c.image), 0.5f);
             vItem.lyt_parent.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -122,6 +123,4 @@ public class AdapterShoppingCart extends RecyclerView.Adapter<RecyclerView.ViewH
         this.items = items;
         notifyDataSetChanged();
     }
-
-
 }

@@ -84,7 +84,6 @@ public class AdapterOrderHistory extends RecyclerView.Adapter<RecyclerView.ViewH
                 }
             });
         }
-
     }
 
     @Override
@@ -105,6 +104,4 @@ public class AdapterOrderHistory extends RecyclerView.Adapter<RecyclerView.ViewH
         this.items = items;
         notifyDataSetChanged();
     }
-
-
 }

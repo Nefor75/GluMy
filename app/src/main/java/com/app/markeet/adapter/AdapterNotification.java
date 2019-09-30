@@ -65,7 +65,6 @@ public class AdapterNotification extends RecyclerView.Adapter<RecyclerView.ViewH
         }
     }
 
-
     public static class ProgressViewHolder extends RecyclerView.ViewHolder {
         public ProgressBar progressBar;
 
@@ -189,5 +188,4 @@ public class AdapterNotification extends RecyclerView.Adapter<RecyclerView.ViewH
     public interface OnLoadMoreListener {
         void onLoadMore(int current_page);
     }
-
 }

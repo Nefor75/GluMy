@@ -24,6 +24,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import com.app.markeet.adapter.AdapterShoppingCart;
 import com.app.markeet.data.DatabaseHandler;
@@ -41,10 +42,12 @@ public class ActivityShoppingCart extends AppCompatActivity {
     private DatabaseHandler db;
     private AdapterShoppingCart adapter;
     private TextView price_total;
+    private TextView price_tv;
     private SharedPref sharedPref;
     private Info info;
     private RadioButton rBmyself;
     private RadioButton rBdilivery;
+    private RadioGroup rG;
     final static String textView = "TEXTVIEW";
     public RadioButton getrBmyself() {
         return rBmyself;
@@ -73,6 +76,8 @@ public class ActivityShoppingCart extends AppCompatActivity {
         price_total = (TextView) findViewById(R.id.price_total);
         rBmyself = (RadioButton) findViewById(R.id.rbutton_with_myself);
         rBdilivery = (RadioButton) findViewById(R.id.rbutton_dilivery);
+        rG = (RadioGroup) findViewById(R.id.rg_add_services);
+        price_tv = (TextView) findViewById(R.id.price);
     }
 
     private void initToolbar() {
@@ -160,10 +165,16 @@ public class ActivityShoppingCart extends AppCompatActivity {
             }
         });
         LinearLayout lyt_add_services = (LinearLayout) findViewById(R.id.lyt_add_services);//Добавлен Linearlayout для допуслуг
+        LinearLayout ll_bottom_cart = (LinearLayout) findViewById(R.id.ll_bottom_cart);
+        LinearLayout ll_total = (LinearLayout) findViewById(R.id.ll_total);
         View lyt_no_item = (View) findViewById(R.id.lyt_no_item);
+
         if (adapter.getItemCount() == 0) {
             lyt_no_item.setVisibility(View.VISIBLE);
-            lyt_add_services.setVisibility(View.INVISIBLE);//здесь он пропадает, когда товара в корзине нет
+            ll_bottom_cart.setVisibility(View.GONE);//здесь он пропадает, когда товара в корзине нет
+            ll_total.setVisibility(View.GONE);//здесь он пропадает, когда товара в корзине нет
+            lyt_add_services.setVisibility(View.GONE);//здесь он пропадает, когда товара в корзине нет
+            //Атрибут INVISIBLE, когда невидимый, оставляет контур, а GONE нет.
         } else {
             lyt_no_item.setVisibility(View.GONE);
         }
@@ -249,6 +260,8 @@ public class ActivityShoppingCart extends AppCompatActivity {
                     db.saveCart(model);
                     displayData();
                     dialog.dismiss();
+                    rG.clearCheck();
+                    price_total.setText("");
                 }
             });
             ((Button) dialog.findViewById(R.id.bt_remove)).setOnClickListener(new View.OnClickListener() {
@@ -257,7 +270,7 @@ public class ActivityShoppingCart extends AppCompatActivity {
                     db.deleteActiveCart(model.product_id);
                     displayData();
                     dialog.dismiss();
-                    price_total.setText("");
+
                 }
             });
             dialog.show();

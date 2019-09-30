@@ -85,5 +85,4 @@ public class AdapterFeaturedNews extends PagerAdapter {
         ((ViewPager) container).removeView((RelativeLayout) object);
 
     }
-
 }

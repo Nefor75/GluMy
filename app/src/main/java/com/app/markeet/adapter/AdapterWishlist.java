@@ -64,7 +64,6 @@ public class AdapterWishlist extends RecyclerView.Adapter<RecyclerView.ViewHolde
         }
     }
 
-
     public static class ProgressViewHolder extends RecyclerView.ViewHolder {
         public ProgressBar progressBar;
 
@@ -178,5 +177,4 @@ public class AdapterWishlist extends RecyclerView.Adapter<RecyclerView.ViewHolde
     public interface OnLoadMoreListener {
         void onLoadMore(int current_page);
     }
-
 }

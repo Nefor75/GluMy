@@ -63,41 +63,73 @@
                     android:textColor="@color/grey_80"
                     android:textStyle="bold" />
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
+                    android:layout_marginTop="10dp"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="@dimen/spacing_large"
-                        android:layout_height="@dimen/spacing_large"
-                        android:src="@drawable/ic_quantity"
-                        android:tint="@color/grey_40" />
+<!--                    <ImageView-->
+<!--                        android:layout_width="@dimen/spacing_large"-->
+<!--                        android:layout_height="@dimen/spacing_large"-->
+<!--                        android:src="@drawable/ic_quantity"-->
+<!--                        android:tint="@color/grey_40" />-->
 
-                    <TextView
-                        android:id="@+id/amount"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="5 item(s)"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-                        android:textColor="@color/grey_40" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/amount"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="5 item(s)"-->
+<!--                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+<!--                        android:textColor="@color/grey_40" />-->
+<!--Вместо View вставлять кучу элементов-->
 
-                    <View
+
+
+
+
+                    <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_weight="1" />
+                        android:layout_height="wrap_content"
+                        android:background="@color/grey_5"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_marginHorizontal="@dimen/spacing_xlarge">
+
+                        <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@color/colorPrimaryLight"
+                                android:src="@drawable/ic_decrease"
+                                android:tint="@android:color/white" />
+
+                        <TextView
+                                android:id="@+id/amount"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@color/colorPrimaryLight"
+                                android:src="@drawable/ic_increase"
+                                android:tint="@android:color/white" />
+
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/price"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
                         android:text="10.5 USD"
+                        android:gravity="end"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                         android:textColor="@color/colorPrice" />
 

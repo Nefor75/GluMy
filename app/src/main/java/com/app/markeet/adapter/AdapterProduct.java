@@ -202,5 +202,4 @@ public class AdapterProduct extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public interface OnLoadMoreListener {
         void onLoadMore(int current_page);
     }
-
 }
