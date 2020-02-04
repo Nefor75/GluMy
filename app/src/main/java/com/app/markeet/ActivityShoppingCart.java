@@ -33,6 +33,8 @@ import com.app.markeet.model.Cart;
 import com.app.markeet.model.Info;
 import com.app.markeet.utils.Tools;
 import java.util.List;
+
+import static com.app.markeet.R.id.lyt_add_services;
 import static com.app.markeet.R.id.lyt_no_item;
 
 public class ActivityShoppingCart extends AppCompatActivity {
@@ -157,6 +159,7 @@ public class ActivityShoppingCart extends AppCompatActivity {
         adapter = new AdapterShoppingCart(this, true, items);
         recyclerView.setAdapter(adapter);
         recyclerView.setNestedScrollingEnabled(false);
+
 
         adapter.setOnItemClickListener(new AdapterShoppingCart.OnItemClickListener() {
             @Override

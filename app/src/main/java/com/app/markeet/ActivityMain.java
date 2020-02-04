@@ -96,7 +96,7 @@ public class ActivityMain extends AppCompatActivity {
         final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
             public void onDrawerOpened(View drawerView) {
-                showInterstitial();
+                //showInterstitial(); //Метод который показывает рекламу????
                 super.onDrawerOpened(drawerView);
             }
         };
@@ -228,9 +228,9 @@ public class ActivityMain extends AppCompatActivity {
                 i = new Intent(this, ActivityInstruction.class);
                 startActivity(i);
                 break;
-//            case R.id.nav_rate:
-//                Tools.rateAction(this);
-//                break;
+            case R.id.nav_rate:
+                Tools.rateAction(this);
+                break;
             case R.id.nav_about:
                 Tools.showDialogAbout(this);
                 break;

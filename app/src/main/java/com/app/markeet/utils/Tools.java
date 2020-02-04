@@ -76,15 +76,15 @@ public class Tools {
         }
     }
 
-//    public static void rateAction(Activity activity) {
-//        Uri uri = Uri.parse("market://details?id=" + activity.getPackageName());
-//        Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
-//        try {
-//            activity.startActivity(goToMarket);
-//        } catch (ActivityNotFoundException e) {
-//            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + activity.getPackageName())));
-//        }
-//    }
+    public static void rateAction(Activity activity) {
+        Uri uri = Uri.parse("market://details?id=" + activity.getPackageName());
+        Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+        try {
+            activity.startActivity(goToMarket);
+        } catch (ActivityNotFoundException e) {
+            activity.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + activity.getPackageName())));
+        }
+    }
 
     public static void showDialogAbout(Activity activity) {
         Dialog dialog = new DialogUtils(activity).buildDialogInfo(R.string.title_about, R.string.content_about, R.string.OK, R.drawable.main_logo, new CallbackDialog() {

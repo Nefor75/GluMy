@@ -32,78 +32,73 @@
             layout="@layout/include_no_item"
             android:visibility="gone" />
 
-        </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/lyt_add_services"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <RadioGroup
-            android:id="@+id/rg_add_services"
+        <LinearLayout
+            android:id="@+id/lyt_add_services"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorGreen"
-            android:layout_above="@+id/ll_bottom_cart"
-            android:theme="@style/MyRadioButton">
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
 
-            <RadioButton
-                android:id="@+id/rbutton_with_myself"
+            <RadioGroup
+                android:id="@+id/rg_add_services"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="start"
-                android:text="@string/with_myself"
-                android:button="@null"
-                android:textColor="@android:color/white"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                android:textSize="18sp"
-                android:layout_marginHorizontal="@dimen/spacing_large">
+                android:background="@color/colorGreen"
+                android:theme="@style/MyRadioButton">
 
-            </RadioButton>
+                <RadioButton
+                    android:id="@+id/rbutton_with_myself"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_large"
+                    android:button="@null"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+                    android:text="@string/with_myself"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp">
 
-            <RadioButton
-                android:id="@+id/rbutton_dilivery"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/spacing_mlarge"
-                android:gravity="start"
-                android:text="@string/delivery"
-                android:textSize="18sp"
-                android:button="@null"
-                android:textColor="@android:color/white"
-                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                android:layout_marginHorizontal="@dimen/spacing_large">
+                </RadioButton>
 
-            </RadioButton>
-        </RadioGroup>
+                <RadioButton
+                    android:id="@+id/rbutton_dilivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_large"
+                    android:button="@null"
+                    android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+                    android:text="@string/delivery"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/white">
+                </RadioButton>
 
-        </View>
+            </RadioGroup>
 
-    </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white"/>
+
     <LinearLayout
         android:id="@+id/ll_bottom_cart"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:background="@color/colorGreen"
-        android:gravity="center_vertical"
+        android:gravity="bottom"
         android:orientation="horizontal" >
 
         <TextView
             android:id="@+id/tv_botom_cart"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_xsmall"
             android:layout_weight="1"
-            android:layout_marginLeft="@dimen/spacing_large"
             android:text="@string/checkout"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             android:textColor="@android:color/white"
             android:textSize="22sp" />
 
@@ -112,7 +107,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_delete"
-            android:layout_marginRight="@dimen/spacing_mlarge"
+            android:layout_marginEnd="@dimen/spacing_mlarge"
+            android:layout_marginBottom="@dimen/spacing_small"
             android:title="@string/title_menu_delete"
             android:onClick="onClicked"/>
 
@@ -121,7 +117,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_checkout"
-            android:layout_marginRight="@dimen/spacing_mlarge"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:layout_marginEnd="19dp"
             android:title="@string/title_menu_checkout"
             android:onClick="onClicked"/>
 
