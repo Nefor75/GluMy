@@ -229,7 +229,7 @@ public class ActivityMain extends AppCompatActivity {
                 startActivity(i);
                 break;
             case R.id.nav_rate:
-                Tools.rateAction(this);
+                //Tools.rateAction(this);
                 break;
             case R.id.nav_about:
                 Tools.showDialogAbout(this);

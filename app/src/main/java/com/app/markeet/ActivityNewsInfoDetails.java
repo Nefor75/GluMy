@@ -90,7 +90,7 @@ public class ActivityNewsInfoDetails extends AppCompatActivity {
         initComponent();
         initToolbar();
         requestAction();
-        prepareAds();
+        //prepareAds(); //Метод показывает рекламу в разделе Новинки
     }
 
     private void initComponent() {
