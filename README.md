@@ -1,5 +1,6 @@
 # GluMy
-![Screenshot_20200717-150639](https://user-images.githubusercontent.com/52212013/88899009-35ceff00-d256-11ea-9c45-f06581369a44.jpg)
+![Screenshot_20200717-150639](https://user-images.githubusercontent.com/52212013/88899179-6a42bb00-d256-11ea-832c-3183ccc5f1ed.jpg)
+
 
 ![Screenshot_20200717-150639](https://user-images.githubusercontent.com/52212013/88898421-5ea2c480-d255-11ea-8ad1-27ca2097b5a0.jpg)
 ![Screenshot_20200717-150703](https://user-images.githubusercontent.com/52212013/88898430-619db500-d255-11ea-9359-fc0486842250.jpg)
